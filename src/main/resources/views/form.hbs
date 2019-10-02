@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+	<h1>Binding nullable parameters</h1>
+	<h4>1) Empty firstname (success)</h4>
+    <form action="/nullable/string" method="post" enctype="multipart/form-data" >
+    	<label>Firstname is empty</label>
+    	<input type="text" name="firstname" value=""/>
+
+    	<button type="submit">Submit</button>
+	</form>
+
+
+	<h4>2) Set firstname = 'Bob' (success)</h4>
+    <form action="/nullable/string" method="post" enctype="multipart/form-data" >
+    	<label>Firstname = Bob</label>
+    	<input type="text" name="firstname" value="Bob"/>
+
+    	<button type="submit">Submit</button>
+	</form>
+
+
+	<h4>3) Empty quantity (failure)</h4>
+	<form action="/nullable/long" method="post" enctype="multipart/form-data" >
+    	<label>Quantity is empty</label>
+    	<input type="text" name="quantity" value=""/>
+
+    	<button type="submit">Submit</button>
+	</form>
+	
+	<h4>4) Set quantity = 123 (success)</h4>
+	<form action="/nullable/long" method="post" enctype="multipart/form-data" >
+    	<label>Quantity = 123</label>
+    	<input type="text" name="quantity" value="123"/>
+
+    	<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
+
